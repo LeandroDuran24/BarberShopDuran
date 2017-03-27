@@ -294,7 +294,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BarbershopTech.Properties.Resources.images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(444, 324);
+            this.ClientSize = new System.Drawing.Size(448, 324);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.buttonNuevo);
             this.Controls.Add(this.FechadateTimePicker1);
