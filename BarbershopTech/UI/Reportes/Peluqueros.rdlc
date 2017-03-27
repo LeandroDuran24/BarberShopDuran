@@ -42,7 +42,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.17639cm</Top>
-        <Left>11.95461cm</Left>
+        <Left>7.61449cm</Left>
         <Height>0.6cm</Height>
         <Width>4.74895cm</Width>
         <Style>
@@ -59,13 +59,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.36914cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.36914cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.36914cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -280,9 +280,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetPeluqueros</DataSetName>
         <Top>2.19287cm</Top>
-        <Left>10.16802cm</Left>
+        <Left>4.63822cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.5cm</Width>
+        <Width>10.10742cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -290,11 +290,35 @@
           </Border>
         </Style>
       </Tablix>
+      <Line Name="Line1">
+        <Top>1.24036cm</Top>
+        <Left>4.63823cm</Left>
+        <Height>0cm</Height>
+        <Width>10.10741cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>6.68224cm</Top>
+        <Left>4.63822cm</Left>
+        <Height>0cm</Height>
+        <Width>10.10742cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>3.79167in</Height>
     <Style />
   </Body>
-  <Width>10.70833in</Width>
+  <Width>7.61458in</Width>
   <Page>
     <PageHeader>
       <Height>2.93688cm</Height>
@@ -305,7 +329,7 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>10.16802cm</Left>
+          <Left>5.68648cm</Left>
           <Height>2.71708cm</Height>
           <Width>8.50354cm</Width>
           <Style>
@@ -321,16 +345,6 @@
         </Border>
       </Style>
     </PageHeader>
-    <PageFooter>
-      <Height>2.54cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>

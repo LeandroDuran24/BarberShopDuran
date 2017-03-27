@@ -27,7 +27,7 @@ namespace BarbershopTech.UI.Reportes
             reportViewer1.Reset();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
 
-            reportViewer1.LocalReport.ReportPath = @"C:\Users\Leandro\Desktop\BarberShop - copia\BarbershopTech\UI\Reportes\Facturas.rdlc";
+            reportViewer1.LocalReport.ReportPath = @"C:\Users\Leandro\Desktop\BarberShop-master\BarbershopTech\UI\Reportes\Facturas.rdlc";
 
             ReportDataSource source = new ReportDataSource("DataSetFacturas", Lista);
 

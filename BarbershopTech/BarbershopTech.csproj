@@ -309,6 +309,9 @@
     </Content>
     <Content Include="DataBase\Script.sql" />
     <None Include="Resources\images.jpg" />
+    <None Include="Resources\login.jpg" />
+    <None Include="Resources\barbershop-inspired-hairstyles-for-men-1108769-TwoByOne.jpg" />
+    <None Include="Resources\consulta2.jpg" />
     <Content Include="UI\Resources\barbershop-inspired-hairstyles-for-men-1108769-TwoByOne.jpg" />
     <Content Include="UI\Resources\consulta2.jpg" />
     <Content Include="UI\Resources\images.jpg" />

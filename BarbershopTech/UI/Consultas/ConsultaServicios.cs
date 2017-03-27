@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BarbershopTech.UI.Reportes;
 using Entidades;
 
 namespace BarbershopTech.Consultas
@@ -124,6 +125,13 @@ namespace BarbershopTech.Consultas
             {
                 SeleccionarCombo();
             }
+        }
+
+        private void buttonImprimir_Click(object sender, EventArgs e)
+        {
+            RServicios service = new RServicios(lista);
+            service.Show();
+
         }
     }
 }

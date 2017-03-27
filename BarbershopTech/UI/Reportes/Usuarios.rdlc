@@ -418,8 +418,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetUsuarios</DataSetName>
-        <Top>2.69558cm</Top>
-        <Left>0.94932cm</Left>
+        <Top>1.50495cm</Top>
+        <Left>2.37808cm</Left>
         <Height>1.2cm</Height>
         <Width>15cm</Width>
         <Style>
@@ -428,6 +428,30 @@
           </Border>
         </Style>
       </Tablix>
+      <Line Name="Line1">
+        <Top>1.17891cm</Top>
+        <Left>2.37808cm</Left>
+        <Height>0cm</Height>
+        <Width>15cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>7.14058cm</Top>
+        <Left>2.51037cm</Left>
+        <Height>0cm</Height>
+        <Width>14.86771cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
       <Textbox Name="Textbox7">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -458,11 +482,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.46729cm</Top>
-        <Left>11.38386cm</Left>
+        <Top>0.10583cm</Top>
+        <Left>7.76141cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.69062cm</Width>
-        <ZIndex>1</ZIndex>
+        <Width>7.85749cm</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -481,10 +505,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>10.8125in</Width>
+  <Width>7.98958in</Width>
   <Page>
     <PageHeader>
-      <Height>3.06917cm</Height>
+      <Height>2.99861cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -492,8 +516,8 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.17604cm</Top>
-          <Left>9.4801cm</Left>
+          <Top>0.28153cm</Top>
+          <Left>4.94578cm</Left>
           <Height>2.71708cm</Height>
           <Width>8.50354cm</Width>
           <Style>

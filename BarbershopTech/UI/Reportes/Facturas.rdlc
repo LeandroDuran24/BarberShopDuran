@@ -42,7 +42,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.17639cm</Top>
-        <Left>12.43086cm</Left>
+        <Left>10.84349cm</Left>
         <Height>0.6cm</Height>
         <Width>3.69062cm</Width>
         <Style>
@@ -738,18 +738,42 @@
           </Border>
         </Style>
       </Tablix>
+      <Line Name="Line1">
+        <Top>0.92287cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0cm</Height>
+        <Width>25cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>6.05578cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0cm</Height>
+        <Width>25.47625cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
-    <Height>4.0625in</Height>
+    <Height>3.64583in</Height>
     <Style>
       <Border>
         <Style>Solid</Style>
       </Border>
     </Style>
   </Body>
-  <Width>10.79167in</Width>
+  <Width>10.60417in</Width>
   <Page>
     <PageHeader>
-      <Height>3.4925cm</Height>
+      <Height>2.71708cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -757,8 +781,7 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.65229cm</Top>
-          <Left>9.77115cm</Left>
+          <Left>8.34349cm</Left>
           <Height>2.71708cm</Height>
           <Width>8.50354cm</Width>
           <Style>
@@ -774,16 +797,6 @@
         </Border>
       </Style>
     </PageHeader>
-    <PageFooter>
-      <Height>2.54cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>

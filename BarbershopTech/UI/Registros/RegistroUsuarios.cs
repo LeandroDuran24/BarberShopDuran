@@ -23,6 +23,7 @@ namespace BarbershopTech.Registros
         {
             ContraseñamaskedTextBox.MaxLength = 14;
             ConfirmarmaskedTextBox.MaxLength = 14;
+            Limpiar();
         }
 
         public bool Validar()

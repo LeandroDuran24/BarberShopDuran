@@ -127,6 +127,7 @@
             this.buttonImprimir.Text = "Imprimir";
             this.buttonImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonImprimir.UseVisualStyleBackColor = false;
+            this.buttonImprimir.Click += new System.EventHandler(this.buttonImprimir_Click);
             // 
             // ConsultaServicios
             // 

@@ -611,7 +611,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetCliente</DataSetName>
         <Top>1.95475cm</Top>
-        <Left>0.39875cm</Left>
+        <Left>0.75625cm</Left>
         <Height>1.78208cm</Height>
         <Width>24.48441cm</Width>
         <Style>
@@ -648,9 +648,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.14993cm</Top>
-        <Left>10.61326cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.69062cm</Width>
+        <Left>10.12409cm</Left>
+        <Height>0.62646cm</Height>
+        <Width>5.2252cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -662,6 +662,30 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Line Name="Line1">
+        <Top>1.13384cm</Top>
+        <Left>0.75625cm</Left>
+        <Height>0cm</Height>
+        <Width>24.48441cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>7.1928cm</Top>
+        <Left>0.75625cm</Left>
+        <Height>0cm</Height>
+        <Width>24.48441cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>3.15451in</Height>
     <Style>
@@ -670,10 +694,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>10.07775in</Width>
+  <Width>10.05183in</Width>
   <Page>
     <PageHeader>
-      <Height>2.74354cm</Height>
+      <Height>2.93757cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -681,7 +705,8 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>8.21813cm</Left>
+          <Top>0.22049cm</Top>
+          <Left>8.57565cm</Left>
           <Height>2.71708cm</Height>
           <Width>8.50354cm</Width>
           <Style>

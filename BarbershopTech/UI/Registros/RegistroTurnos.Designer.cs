@@ -162,8 +162,7 @@
             // 
             // NombrecomboBox
             // 
-            this.NombrecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.NombrecomboBox.ForeColor = System.Drawing.Color.White;
+            this.NombrecomboBox.ForeColor = System.Drawing.Color.Black;
             this.NombrecomboBox.FormattingEnabled = true;
             this.NombrecomboBox.Location = new System.Drawing.Point(129, 56);
             this.NombrecomboBox.Name = "NombrecomboBox";
@@ -195,8 +194,7 @@
             // 
             // PeluquerocomboBox
             // 
-            this.PeluquerocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.PeluquerocomboBox.ForeColor = System.Drawing.Color.White;
+            this.PeluquerocomboBox.ForeColor = System.Drawing.Color.Black;
             this.PeluquerocomboBox.FormattingEnabled = true;
             this.PeluquerocomboBox.Location = new System.Drawing.Point(129, 88);
             this.PeluquerocomboBox.Name = "PeluquerocomboBox";

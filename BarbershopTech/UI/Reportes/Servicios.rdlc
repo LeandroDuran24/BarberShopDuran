@@ -54,7 +54,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.29937cm</Top>
-        <Left>12.09823cm</Left>
+        <Left>8.06365cm</Left>
         <Height>0.6cm</Height>
         <Width>4.03458cm</Width>
         <Style>
@@ -291,8 +291,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetServicios</DataSetName>
-        <Top>3.11891cm</Top>
-        <Left>9.59823cm</Left>
+        <Top>2.17819cm</Top>
+        <Left>6.68781cm</Left>
         <Height>1.2cm</Height>
         <Width>7.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -302,6 +302,30 @@
           </Border>
         </Style>
       </Tablix>
+      <Line Name="Line1">
+        <Top>1.04048cm</Top>
+        <Left>6.68781cm</Left>
+        <Height>0cm</Height>
+        <Width>7.5cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>6.1384cm</Top>
+        <Left>6.68781cm</Left>
+        <Height>0cm</Height>
+        <Width>7.5cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>3.86458in</Height>
     <Style>
@@ -310,10 +334,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>10.75in</Width>
+  <Width>7.79167in</Width>
   <Page>
     <PageHeader>
-      <Height>2.98979cm</Height>
+      <Height>2.8134cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -321,7 +345,8 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>9.40073cm</Left>
+          <Top>0.09632cm</Top>
+          <Left>6.09469cm</Left>
           <Height>2.71708cm</Height>
           <Width>8.50354cm</Width>
           <Style>
@@ -337,16 +362,6 @@
         </Border>
       </Style>
     </PageHeader>
-    <PageFooter>
-      <Height>2.54cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
