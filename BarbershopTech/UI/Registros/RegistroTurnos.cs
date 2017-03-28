@@ -231,7 +231,7 @@ namespace BarbershopTech.Registros
                 NombrecomboBox.Text = turno.NombreCliente;
                 PeluquerocomboBox.Text = turno.NombrePeluquero;
                 dateTimePickerHasta.Text = Convert.ToString(turno.FechaHasta);
-                MessageBox.Show("Se ha encontrado Correctamente");
+               
             }
             else
             {

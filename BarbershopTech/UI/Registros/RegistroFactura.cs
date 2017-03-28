@@ -134,10 +134,10 @@ namespace BarbershopTech.Registros
 
         public void LlenarComboPago()
         {
-            comboBoxPago.Items.Insert(0, "Credito");
-            comboBoxPago.Items.Insert(1, "Contado");
+
+            comboBoxPago.Items.Insert(0, "Contado");
             comboBoxPago.DataSource = comboBoxPago.Items;
-            comboBoxPago.DisplayMember = "Credito";
+            comboBoxPago.DisplayMember = "Contado";
 
             if (comboBoxPago.Items.Count > 0)
                 comboBoxPago.SelectedIndex = -1;
@@ -157,10 +157,7 @@ namespace BarbershopTech.Registros
             factura.Total = Utilidades.TOINT(textBoxTotal.Text);
             factura.TipoPago = comboBoxPago.Text;
 
-            if (comboBoxPago.SelectedIndex == 0)
-                factura.TipoPago = "Credito";
-            else
-                factura.TipoPago = "Contado";
+            factura.TipoPago = "Contado";
 
             return factura;
         }
@@ -262,7 +259,7 @@ namespace BarbershopTech.Registros
                 textBoxSub.Text = Convert.ToString(factura.SubTotal.ToString());
                 textBoxTotal.Text = Convert.ToString(factura.Total.ToString());
                 LlenarDataGrid(factura);
-                MessageBox.Show(" se ha encontrado Correctamente");
+
             }
             else
             {
@@ -282,7 +279,7 @@ namespace BarbershopTech.Registros
                 TipoServicios servicios = BLL.TipoServicioBLL.Buscar(p => p.ServicioId == id);
                 bool anadido = false;
 
-                if(servicios!=null)
+                if (servicios != null)
                 {
                     foreach (var service in factura.ServicioList)
                     {
@@ -292,11 +289,11 @@ namespace BarbershopTech.Registros
                         }
                     }
                 }
-               
+
 
                 if (servicios != null && anadido == false)
                 {
-                    
+
                     factura.ServicioList.Add(servicios);
                     LlenarDataGrid(factura);
                     SacarCuenta();
@@ -377,6 +374,12 @@ namespace BarbershopTech.Registros
             }
         }
 
+        private void buttonCrear_Click(object sender, EventArgs e)
+        {
+            RegistroClientes cliente = new RegistroClientes();
+            cliente.Show();
+        }
+
         private void comboBoxNombre_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -416,5 +419,7 @@ namespace BarbershopTech.Registros
         {
 
         }
+
+
     }
 }

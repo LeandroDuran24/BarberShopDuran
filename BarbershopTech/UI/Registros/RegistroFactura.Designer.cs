@@ -52,6 +52,7 @@
             this.PrecioProductotextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonCrear = new System.Windows.Forms.Button();
             this.comboBoxPago = new System.Windows.Forms.ComboBox();
             this.labelAtendido = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -209,9 +210,9 @@
             this.textBoxTotal.Location = new System.Drawing.Point(109, 54);
             this.textBoxTotal.Multiline = true;
             this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
             this.textBoxTotal.Size = new System.Drawing.Size(117, 25);
             this.textBoxTotal.TabIndex = 83;
-            this.textBoxTotal.Text = "$$$";
             // 
             // textBoxSub
             // 
@@ -220,9 +221,9 @@
             this.textBoxSub.Location = new System.Drawing.Point(109, 19);
             this.textBoxSub.Multiline = true;
             this.textBoxSub.Name = "textBoxSub";
+            this.textBoxSub.ReadOnly = true;
             this.textBoxSub.Size = new System.Drawing.Size(117, 25);
             this.textBoxSub.TabIndex = 82;
-            this.textBoxSub.Text = "$$$";
             // 
             // label8
             // 
@@ -337,6 +338,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.buttonCrear);
             this.groupBox3.Controls.Add(this.comboBoxPago);
             this.groupBox3.Controls.Add(this.labelAtendido);
             this.groupBox3.Controls.Add(this.label7);
@@ -356,6 +358,21 @@
             this.groupBox3.TabIndex = 85;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
+            // 
+            // buttonCrear
+            // 
+            this.buttonCrear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrear.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrear.Image = ((System.Drawing.Image)(resources.GetObject("buttonCrear.Image")));
+            this.buttonCrear.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.buttonCrear.Location = new System.Drawing.Point(369, 52);
+            this.buttonCrear.Name = "buttonCrear";
+            this.buttonCrear.Size = new System.Drawing.Size(60, 20);
+            this.buttonCrear.TabIndex = 52;
+            this.buttonCrear.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buttonCrear.UseVisualStyleBackColor = false;
+            this.buttonCrear.Click += new System.EventHandler(this.buttonCrear_Click);
             // 
             // comboBoxPago
             // 
@@ -476,7 +493,7 @@
             this.comboBoxNombre.FormattingEnabled = true;
             this.comboBoxNombre.Location = new System.Drawing.Point(115, 49);
             this.comboBoxNombre.Name = "comboBoxNombre";
-            this.comboBoxNombre.Size = new System.Drawing.Size(317, 26);
+            this.comboBoxNombre.Size = new System.Drawing.Size(248, 26);
             this.comboBoxNombre.TabIndex = 82;
             this.comboBoxNombre.Text = "Nombre cliente";
             this.comboBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxNombre_KeyPress_1);
@@ -519,9 +536,9 @@
             this.textBoxDevuelta.Location = new System.Drawing.Point(109, 131);
             this.textBoxDevuelta.Multiline = true;
             this.textBoxDevuelta.Name = "textBoxDevuelta";
+            this.textBoxDevuelta.ReadOnly = true;
             this.textBoxDevuelta.Size = new System.Drawing.Size(117, 25);
             this.textBoxDevuelta.TabIndex = 87;
-            this.textBoxDevuelta.Text = "$$$";
             // 
             // textBoxMonto
             // 
@@ -532,7 +549,6 @@
             this.textBoxMonto.Name = "textBoxMonto";
             this.textBoxMonto.Size = new System.Drawing.Size(117, 25);
             this.textBoxMonto.TabIndex = 86;
-            this.textBoxMonto.Text = "$$$";
             this.textBoxMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMonto_KeyPress);
             // 
             // label1
@@ -694,5 +710,6 @@
         private System.Windows.Forms.ComboBox comboBoxPago;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button buttonCrear;
     }
 }

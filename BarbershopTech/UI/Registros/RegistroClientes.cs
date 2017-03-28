@@ -164,7 +164,7 @@ namespace BarbershopTech.Registros
                 cedmaskedTextBox.Text = cliente.Cedula;
                 FechadateTimePicker1.Value = cliente.Fecha;
 
-                MessageBox.Show("Se ha encontrado Correctamente");
+                
             }
             else
             {

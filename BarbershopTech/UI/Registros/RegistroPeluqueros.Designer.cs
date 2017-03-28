@@ -91,6 +91,7 @@
             this.nombretextBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nombretextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombretextBox3.Location = new System.Drawing.Point(160, 55);
+            this.nombretextBox3.MaxLength = 30;
             this.nombretextBox3.Name = "nombretextBox3";
             this.nombretextBox3.Size = new System.Drawing.Size(208, 20);
             this.nombretextBox3.TabIndex = 51;

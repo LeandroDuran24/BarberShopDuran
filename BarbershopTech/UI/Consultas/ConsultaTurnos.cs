@@ -98,8 +98,8 @@ namespace BarbershopTech.Consultas
 
             else if (comboBox1.SelectedIndex == 4)
             {
-
-                if (desdedateTimePicker.Value.Date > hastadateTimePicker.Value.Date)
+               // dataGridView1.Rows.RemoveAt()
+                if (desdedateTimePicker.Value.Date <= hastadateTimePicker.Value.Date)
                 {
                     lista = BLL.TurnoBLL.GetList(p => p.FechaDesde >= desdedateTimePicker.Value.Date && p.FechaHasta < hastadateTimePicker.Value.Date);
                 }
@@ -182,6 +182,12 @@ namespace BarbershopTech.Consultas
             {
                 SeleccionarCombo();
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           // fila = e.RowIndex;
+            //tengo q validar q sea mayor que 1 y validar q no este vacio.
         }
     }
 }

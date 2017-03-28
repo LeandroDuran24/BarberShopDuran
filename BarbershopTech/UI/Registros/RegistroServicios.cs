@@ -152,7 +152,7 @@ namespace BarbershopTech.Registros
                 nombretextBox3.Text = servicio.Nombre;
                 CostoTexBox.Text = Convert.ToString(servicio.Costo);
 
-                MessageBox.Show("Se ha encontrado Correctamente");
+               
             }
             else
             {

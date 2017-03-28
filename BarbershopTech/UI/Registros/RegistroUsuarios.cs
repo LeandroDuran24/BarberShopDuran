@@ -149,8 +149,18 @@ namespace BarbershopTech.Registros
 
             if (usuario != null)
             {
-                BLL.UsuarioBLL.Eliminar(usuario);
-                MessageBox.Show("Correcto");
+                if (usuario.UsuarioId == 1)
+                {
+                    MessageBox.Show("No se Puede Eliminar este Usuario");
+
+
+                }
+                else
+                {
+                    BLL.UsuarioBLL.Eliminar(usuario);
+                    MessageBox.Show("Correcto");
+                }
+
 
             }
             else
@@ -210,13 +220,13 @@ namespace BarbershopTech.Registros
                 ContraseñamaskedTextBox.Text = Convert.ToString(usuario.Contrasena);
                 ConfirmarmaskedTextBox.Text = Convert.ToString(usuario.Confirmar);
                 comboBox1.Text = usuario.Tipo;
-                MessageBox.Show("Se ha encontrado correctamente");
+
             }
             else
             {
                 MessageBox.Show("No existe");
             }
-            Limpiar();
+
         }
 
         private void textBoxId_KeyPress(object sender, KeyPressEventArgs e)

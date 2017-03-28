@@ -133,6 +133,7 @@
             this.nombretextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nombretextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombretextBox.Location = new System.Drawing.Point(146, 50);
+            this.nombretextBox.MaxLength = 40;
             this.nombretextBox.Name = "nombretextBox";
             this.nombretextBox.Size = new System.Drawing.Size(231, 20);
             this.nombretextBox.TabIndex = 48;
@@ -143,6 +144,7 @@
             this.apellidotextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apellidotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apellidotextBox.Location = new System.Drawing.Point(146, 76);
+            this.apellidotextBox.MaxLength = 40;
             this.apellidotextBox.Name = "apellidotextBox";
             this.apellidotextBox.Size = new System.Drawing.Size(231, 20);
             this.apellidotextBox.TabIndex = 49;
@@ -153,6 +155,7 @@
             this.direcciontextBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.direcciontextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direcciontextBox1.Location = new System.Drawing.Point(146, 102);
+            this.direcciontextBox1.MaxLength = 40;
             this.direcciontextBox1.Name = "direcciontextBox1";
             this.direcciontextBox1.Size = new System.Drawing.Size(231, 20);
             this.direcciontextBox1.TabIndex = 50;
@@ -163,6 +166,7 @@
             this.emailextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.emailextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailextBox.Location = new System.Drawing.Point(146, 128);
+            this.emailextBox.MaxLength = 40;
             this.emailextBox.Name = "emailextBox";
             this.emailextBox.Size = new System.Drawing.Size(231, 20);
             this.emailextBox.TabIndex = 51;

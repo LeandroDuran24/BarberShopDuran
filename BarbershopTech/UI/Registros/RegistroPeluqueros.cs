@@ -142,7 +142,7 @@ namespace BarbershopTech.Registros
             if (peluquero != null)
             {
                 nombretextBox3.Text = peluquero.Nombre;
-                MessageBox.Show("Se ha encontrado Correctamente");
+                
             }
             else
             {

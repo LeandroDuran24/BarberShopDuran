@@ -40,14 +40,6 @@ Nombre varchar(25),
 Costo varchar(12)
 );
 
-create table Productos(
-ProductoId int identity(1,1) primary key,
-Nombre varchar(25),
-Descripcion varchar(255),
-PrecioCompra int,
-PrecioVenta int,
-Cantidad int,
-);
 
 create table Facturas(
 FacturaId int identity(1,1) primary key,
@@ -69,8 +61,4 @@ ServicioId int,
 FacturaId int
 );
 
-create table FacturaProductos(
-FacturaProductoId int identity(1,1) primary key,
-ProductoId int,
-FacturaId int
-);
+

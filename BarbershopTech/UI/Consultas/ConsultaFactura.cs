@@ -73,7 +73,8 @@ namespace BarbershopTech.Consultas
                 }
                 else
                 {
-                    lista = BLL.FacturaBLL.GetList(p => p.FacturaId == Utilidades.TOINT(BuscartextBox.Text));
+                    int id = Utilidades.TOINT(BuscartextBox.Text);
+                    lista = BLL.FacturaBLL.GetList(p => p.FacturaId ==id);
                 }
             }
             dataGridView1.DataSource = lista;

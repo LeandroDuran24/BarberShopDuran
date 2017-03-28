@@ -79,6 +79,7 @@
             this.NombretextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NombretextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombretextBox.Location = new System.Drawing.Point(179, 57);
+            this.NombretextBox.MaxLength = 30;
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(235, 20);
             this.NombretextBox.TabIndex = 1;
@@ -161,6 +162,7 @@
             this.EmailtextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailtextBox.Location = new System.Drawing.Point(179, 83);
+            this.EmailtextBox.MaxLength = 25;
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(235, 20);
             this.EmailtextBox.TabIndex = 2;
