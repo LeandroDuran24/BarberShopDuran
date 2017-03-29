@@ -29,7 +29,7 @@ namespace BarbershopTech.UI.Reportes
 
             reportViewer1.LocalReport.ReportPath = @"C:\Users\Leandro\Desktop\BarberShop-master\BarbershopTech\UI\Reportes\Facturas.rdlc";
 
-            ReportDataSource source = new ReportDataSource("DataSetFacturas", Lista);
+            ReportDataSource source = new ReportDataSource("DataSetFactura", Lista);
 
             reportViewer1.LocalReport.DataSources.Add(source);
             this.reportViewer1.RefreshReport();

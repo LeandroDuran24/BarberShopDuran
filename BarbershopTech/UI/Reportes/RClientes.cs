@@ -36,5 +36,10 @@ namespace BarbershopTech.UI.Reportes
             reportViewer1.LocalReport.DataSources.Add(source);
             this.reportViewer1.RefreshReport();
         }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace BarbershopTech.Registros
     public partial class RegistroFactura : Form
     {
         Facturas factura;
+        int fila;
         public RegistroFactura()
         {
             InitializeComponent();
@@ -165,8 +166,8 @@ namespace BarbershopTech.Registros
         public void LlenarDataGrid(Facturas nueva)
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = nueva.ServicioList.ToList();
-            this.dataGridView1.Columns["ServicioId"].Visible = false;
+            dataGridView1.DataSource = nueva.ServicioList;
+            //this.dataGridView1.Columns["ServicioId"].Visible = false;
         }
 
         public void SacarCuenta()
@@ -228,7 +229,11 @@ namespace BarbershopTech.Registros
                 if (factura.FacturaId != 0)
                 {
                     BLL.FacturaBLL.Mofidicar(factura);
+
                     MessageBox.Show("Se ha Modificado");
+                    // dataGridView1.Rows.RemoveAt(fila);
+                  
+
                 }
                 else
                 {
@@ -267,6 +272,24 @@ namespace BarbershopTech.Registros
             }
         }
 
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(textBoxfacturaId.Text);
+            factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
+            if (factura != null)
+            {
+                BLL.FacturaBLL.Eliminar(factura);
+                MessageBox.Show("Se ha eliminado");
+
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+            Limpiar();
+        }
+
         private void buttonNuevo_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(ProductoIdtextBox.Text))
@@ -297,6 +320,7 @@ namespace BarbershopTech.Registros
                     factura.ServicioList.Add(servicios);
                     LlenarDataGrid(factura);
                     SacarCuenta();
+
                 }
 
             }
@@ -378,6 +402,7 @@ namespace BarbershopTech.Registros
         {
             RegistroClientes cliente = new RegistroClientes();
             cliente.Show();
+
         }
 
         private void comboBoxNombre_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -417,6 +442,18 @@ namespace BarbershopTech.Registros
 
         private void textBoxPorcientoDescuento_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fila = dataGridView1.CurrentRow.Index;
+
+            ProductoIdtextBox.Text = dataGridView1[0, fila].Value.ToString();
+            NombreProductotextBox.Text = dataGridView1[1, fila].Value.ToString();
+            PrecioProductotextBox.Text = dataGridView1[2, fila].Value.ToString();
+            buttonBuscar.Enabled = false;
+            Eliminarbutton.Enabled = false;
 
         }
 
