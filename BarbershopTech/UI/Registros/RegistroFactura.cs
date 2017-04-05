@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BarbershopTech.UI.Reportes;
 using DAL;
 using Entidades;
 
@@ -170,6 +171,7 @@ namespace BarbershopTech.Registros
             //this.dataGridView1.Columns["ServicioId"].Visible = false;
         }
 
+
         public void SacarCuenta()
         {
             decimal Subtotal = 0;
@@ -232,8 +234,6 @@ namespace BarbershopTech.Registros
 
                     MessageBox.Show("Se ha Modificado");
                     // dataGridView1.Rows.RemoveAt(fila);
-                  
-
                 }
                 else
                 {
@@ -456,6 +456,12 @@ namespace BarbershopTech.Registros
             Eliminarbutton.Enabled = false;
 
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }

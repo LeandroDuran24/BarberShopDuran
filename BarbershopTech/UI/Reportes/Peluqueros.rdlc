@@ -223,7 +223,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetPeluqueros</DataSetName>
-        <Top>0.17639cm</Top>
+        <Top>0.91722cm</Top>
         <Left>4.0217cm</Left>
         <Height>1.2cm</Height>
         <Width>10.10742cm</Width>
@@ -233,6 +233,44 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reportes Peluqueros</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>yyy/MM/dd</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.07056cm</Top>
+        <Left>6.62577cm</Left>
+        <Height>0.63528cm</Height>
+        <Width>4.74895cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>Turquoise</Color>
+            <Style>None</Style>
+            <Width>2pt</Width>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>3.29167in</Height>
     <Style>
@@ -243,10 +281,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>7.61458in</Width>
+  <Width>7.75508in</Width>
   <Page>
     <PageHeader>
-      <Height>2.79646cm</Height>
+      <Height>2.62889cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -254,8 +292,9 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>4.89273cm</Left>
-          <Height>2.71708cm</Height>
+          <Top>0.01765cm</Top>
+          <Left>4.35479cm</Left>
+          <Height>2.54069cm</Height>
           <Width>8.50354cm</Width>
           <Style>
             <Border>
@@ -265,37 +304,40 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox2">
+        <Textbox Name="Textbox6">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reportes Peluqueros</Value>
+                  <Value>Fecha:</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
-                    <Format>yyy/MM/dd</Format>
                   </Style>
                 </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Now()</Value>
+                  <Style />
+                </TextRun>
               </TextRuns>
-              <Style>
-                <LineHeight>12pt</LineHeight>
-              </Style>
+              <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>2.01124cm</Top>
-          <Left>6.62755cm</Left>
-          <Height>0.63528cm</Height>
-          <Width>4.74895cm</Width>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>1.99361cm</Top>
+          <Left>11.36784cm</Left>
+          <Height>0.6cm</Height>
+          <Width>5.64854cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
-              <Color>Turquoise</Color>
               <Style>None</Style>
-              <Width>2pt</Width>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -313,7 +355,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.08479cm</Height>
+      <Height>1.13411cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -344,6 +386,40 @@
           <Left>8.17011cm</Left>
           <Height>0.70943cm</Height>
           <Width>6.57553cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Pagina</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Format>yyy/MM/dd</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0.14111cm</Top>
+          <Left>6.62577cm</Left>
+          <Height>0.70943cm</Height>
+          <Width>1.54434cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

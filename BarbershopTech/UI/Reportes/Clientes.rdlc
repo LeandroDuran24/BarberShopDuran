@@ -601,7 +601,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetCliente</DataSetName>
-        <Top>0.14111cm</Top>
+        <Top>0.88194cm</Top>
         <Left>0.3175cm</Left>
         <Height>1.75562cm</Height>
         <Width>24.48441cm</Width>
@@ -611,6 +611,40 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reportes Clientes</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.11437cm</Top>
+        <Left>8.47897cm</Left>
+        <Height>0.62646cm</Height>
+        <Width>5.2252cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>White</Color>
+            <Style>Double</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>3.66226in</Height>
     <Style>
@@ -624,7 +658,7 @@
   <Width>9.96243in</Width>
   <Page>
     <PageHeader>
-      <Height>3.01694cm</Height>
+      <Height>3.07868cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -632,8 +666,7 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.07056cm</Top>
-          <Left>8.47897cm</Left>
+          <Left>5.75848cm</Left>
           <Height>2.86701cm</Height>
           <Width>8.16147cm</Width>
           <Style>
@@ -644,33 +677,40 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox2">
+        <Textbox Name="Textbox6">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reportes Clientes</Value>
+                  <Value>Fecha:</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Now()</Value>
+                  <Style />
+                </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.82604cm</Top>
-          <Left>10.55846cm</Left>
-          <Height>0.62646cm</Height>
-          <Width>5.2252cm</Width>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>2.26701cm</Top>
+          <Left>11.6801cm</Left>
+          <Height>0.6cm</Height>
+          <Width>5.64854cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
-              <Color>White</Color>
-              <Style>Double</Style>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -688,7 +728,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.92604cm</Height>
+      <Height>0.95128cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

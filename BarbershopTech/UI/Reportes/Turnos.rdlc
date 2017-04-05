@@ -475,8 +475,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetTurnos</DataSetName>
-        <Top>0.17639cm</Top>
-        <Left>0.56365cm</Left>
+        <Top>0.94368cm</Top>
+        <Left>0.64854cm</Left>
         <Height>1.2cm</Height>
         <Width>17.5cm</Width>
         <Style>
@@ -485,6 +485,41 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reportes Turnos</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.07056cm</Top>
+        <Left>8.14854cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.69062cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>Turquoise</Color>
+            <Style>None</Style>
+            <Width>2pt</Width>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>3.82292in</Height>
     <Style>
@@ -495,7 +530,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>7.35416in</Width>
+  <Width>7.38758in</Width>
   <Page>
     <PageHeader>
       <Height>2.74354cm</Height>
@@ -506,7 +541,7 @@
           <Source>Embedded</Source>
           <Value>report</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>5.24802cm</Left>
+          <Left>5.33291cm</Left>
           <Height>2.71708cm</Height>
           <Width>8.50354cm</Width>
           <Style>
@@ -517,55 +552,40 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox2">
+        <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reportes Turnos</Value>
+                  <Value>Fecha:</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
                 <TextRun>
-                  <Value />
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
                 </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
                 <TextRun>
-                  <Value />
+                  <Value>=Now()</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.96715cm</Top>
-          <Left>8.06365cm</Left>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>2.07298cm</Top>
+          <Left>11.10879cm</Left>
           <Height>0.6cm</Height>
-          <Width>3.69062cm</Width>
+          <Width>5.64854cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
-              <Color>Turquoise</Color>
               <Style>None</Style>
-              <Width>2pt</Width>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -611,7 +631,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.10583cm</Top>
-          <Left>7.66598cm</Left>
+          <Left>7.75087cm</Left>
           <Height>0.70943cm</Height>
           <Width>6.57553cm</Width>
           <Style>

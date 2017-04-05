@@ -223,7 +223,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetServicios</DataSetName>
-        <Top>0.29964cm</Top>
+        <Top>1.17276cm</Top>
         <Left>5.31197cm</Left>
         <Height>1.2cm</Height>
         <Width>7.5cm</Width>
@@ -233,6 +233,41 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reportes Servicios</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.14111cm</Top>
+        <Left>7.16406cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.03458cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>Turquoise</Color>
+            <Style>None</Style>
+            <Width>2pt</Width>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2.875in</Height>
     <Style>
@@ -266,67 +301,40 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox2">
+        <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reportes Servicios</Value>
+                  <Value>Fecha:</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
                 <TextRun>
-                  <Value />
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
                 </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
                 <TextRun>
-                  <Value />
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
+                  <Value>=Now()</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
           <Top>2.2134cm</Top>
-          <Left>7.16406cm</Left>
+          <Left>10.31197cm</Left>
           <Height>0.6cm</Height>
-          <Width>4.03458cm</Width>
+          <Width>5.64854cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
-              <Color>Turquoise</Color>
               <Style>None</Style>
-              <Width>2pt</Width>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
