@@ -158,6 +158,7 @@ namespace BarbershopTech.Registros
             factura.SubTotal = Utilidades.TOINT(textBoxSub.Text);
             factura.Total = Utilidades.TOINT(textBoxTotal.Text);
             factura.TipoPago = comboBoxPago.Text;
+            factura.Atendido =InicioSesion.Label().Nombres;
 
             factura.TipoPago = "Contado";
 

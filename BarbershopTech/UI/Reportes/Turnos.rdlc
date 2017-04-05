@@ -505,7 +505,7 @@
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.07056cm</Top>
         <Left>8.14854cm</Left>
-        <Height>0.6cm</Height>
+        <Height>0.69673cm</Height>
         <Width>3.69062cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -552,36 +552,29 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox8">
+        <Textbox Name="Textbox10">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Fecha:</Value>
+                  <Value>Pagina</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
+                    <Format>yyy/MM/dd</Format>
                   </Style>
-                </TextRun>
-                <TextRun>
-                  <Value xml:space="preserve"> </Value>
-                  <Style />
-                </TextRun>
-                <TextRun>
-                  <Value>=Now()</Value>
-                  <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>2.07298cm</Top>
-          <Left>11.10879cm</Left>
-          <Height>0.6cm</Height>
-          <Width>5.64854cm</Width>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>1.01705cm</Top>
+          <Left>8.61006cm</Left>
+          <Height>0.70943cm</Height>
+          <Width>1.54434cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -634,6 +627,40 @@
           <Left>7.75087cm</Left>
           <Height>0.70943cm</Height>
           <Width>6.57553cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox12">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Pagina</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Format>yyy/MM/dd</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0.11078cm</Top>
+          <Left>6.20653cm</Left>
+          <Height>0.70943cm</Height>
+          <Width>1.54434cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

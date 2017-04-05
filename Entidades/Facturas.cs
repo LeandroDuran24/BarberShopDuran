@@ -19,6 +19,7 @@ namespace Entidades
         public string TipoPago { get; set; }
         public double Total { get; set; }
         public double SubTotal { get; set; }
+        public string Atendido { get; set; }
 
 
         public virtual List<TipoServicios> ServicioList { get; set; }

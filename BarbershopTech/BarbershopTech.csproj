@@ -253,7 +253,7 @@
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\Clientes.rdlc" />
-    <EmbeddedResource Include="UI\Reportes\Facturas.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\Facturas1.rdlc" />
     <EmbeddedResource Include="UI\Reportes\Peluqueros.rdlc" />
     <EmbeddedResource Include="UI\Reportes\RClientes.resx">
       <DependentUpon>RClientes.cs</DependentUpon>
