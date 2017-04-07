@@ -87,22 +87,32 @@ namespace BarbershopTech.Registros
             }
             else
             {
-                int id = int.Parse(PeluqueroidtextBox.Text);
-                peluquero = BLL.PeluqueroBLL.Buscar((p => p.PeluqueroId == id));
-
-                if (peluquero != null)
+                DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
                 {
+                    int id = int.Parse(PeluqueroidtextBox.Text);
+                    peluquero = BLL.PeluqueroBLL.Buscar((p => p.PeluqueroId == id));
 
-                    BLL.PeluqueroBLL.Eliminar(peluquero);
-                    MessageBox.Show("Se ha Eliminado correctamente");
+                    if (peluquero != null)
+                    {
 
+                        BLL.PeluqueroBLL.Eliminar(peluquero);
+                        MessageBox.Show("Se ha Eliminado correctamente");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha Eliminado");
+
+                    }
+                    Limpiar();
                 }
-                else
+                else if (dialogResult == DialogResult.No)
                 {
-                    MessageBox.Show("No se ha Eliminado");
-
+                    MessageBox.Show("Cancelado...");
+                    Limpiar();
                 }
-                Limpiar();
+
             }
 
 
@@ -132,7 +142,8 @@ namespace BarbershopTech.Registros
                 else
                 {
                     BLL.PeluqueroBLL.Guardar(peluquero);
-                    MessageBox.Show("Se ha Guardado Correctamente...");
+                     MessageBox.Show("Se ha Guardado Correctamente...");
+                    
                 }
 
                 Limpiar();
@@ -208,6 +219,7 @@ namespace BarbershopTech.Registros
         private void RegistroPeluqueros_Load(object sender, EventArgs e)
         {
             Limpiar();
+           
         }
 
         private void PeluqueroidtextBox_KeyPress(object sender, KeyPressEventArgs e)

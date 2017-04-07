@@ -329,14 +329,35 @@ namespace BarbershopTech.Registros
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Seguro que desea Salir?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Cancelado...");
+
+            }
+
         }
 
         private void cambiarCuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            InicioSesion l = new InicioSesion();
-            l.Show();
+
+            DialogResult dialogResult = MessageBox.Show("Seguro que desea Cambiar Usuario?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                InicioSesion l = new InicioSesion();
+                l.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Cancelado...");
+
+            }
+
         }
 
         private void labelUsuarios_Click(object sender, EventArgs e)

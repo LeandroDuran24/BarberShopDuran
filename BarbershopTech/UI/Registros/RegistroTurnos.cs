@@ -207,20 +207,30 @@ namespace BarbershopTech.Registros
             }
             else
             {
-                int id = int.Parse(IdtextBox.Text);
-                turno = BLL.TurnoBLL.Buscar((p => p.TurnosId == id));
-
-                if (turno != null)
+                DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    BLL.TurnoBLL.Eliminar(turno);
-                    MessageBox.Show("Se ha eliminado Correctamente");
-                }
-                else
-                {
-                    MessageBox.Show("No se ha Eliminado");
+                    int id = int.Parse(IdtextBox.Text);
+                    turno = BLL.TurnoBLL.Buscar((p => p.TurnosId == id));
 
+                    if (turno != null)
+                    {
+                        BLL.TurnoBLL.Eliminar(turno);
+                        MessageBox.Show("Se ha eliminado Correctamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha Eliminado");
+
+                    }
+                    Limpiar();
                 }
-                Limpiar();
+                else if (dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("Cancelado...");
+                    Limpiar();
+                }
+
             }
 
         }

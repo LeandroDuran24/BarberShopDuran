@@ -117,24 +117,34 @@ namespace BarbershopTech.Registros
                 errorProvider1.SetError(IdtextBox, "Favor Llenar");
 
             }
-            else 
+            else
             {
-                int id = int.Parse(IdtextBox.Text);
-                Clientes conn = BLL.ClienteBLL.Buscar((p => p.ClienteId == id));
-
-                if (conn != null)
+                DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar?", "¡Advertencia!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    BLL.ClienteBLL.Eliminar(conn);
-                    MessageBox.Show("Se ha eliminado Correctamente");
-                }
-                else
-                {
-                    MessageBox.Show("No se ha Eliminado");
+                    int id = int.Parse(IdtextBox.Text);
+                    Clientes conn = BLL.ClienteBLL.Buscar((p => p.ClienteId == id));
 
+                    if (conn != null)
+                    {
+                        BLL.ClienteBLL.Eliminar(conn);
+                        MessageBox.Show("Se ha eliminado Correctamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha Eliminado");
+
+                    }
+                    Limpiar();
                 }
-                Limpiar();
+                else if (dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("Cancelado...");
+                    Limpiar();
+                }
+
             }
-            
+
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)

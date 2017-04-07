@@ -269,7 +269,7 @@ namespace BarbershopTech.Registros
                     Limpiar();
 
                 }
-               
+
             }
 
         }
@@ -283,22 +283,32 @@ namespace BarbershopTech.Registros
             }
             else
             {
-                int id = int.Parse(textBoxfacturaId.Text);
-                factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
-                if (factura != null)
+                DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    BLL.FacturaBLL.Eliminar(factura);
-                    MessageBox.Show("Se ha eliminado");
+                    int id = int.Parse(textBoxfacturaId.Text);
+                    factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
+                    if (factura != null)
+                    {
+                        BLL.FacturaBLL.Eliminar(factura);
+                        MessageBox.Show("Se ha eliminado");
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe");
+
+                    }
+                    Limpiar();
                 }
-                else
+                else if (dialogResult == DialogResult.No)
                 {
-                    MessageBox.Show("No existe");
-                   
+                    MessageBox.Show("Cancelado...");
+                    Limpiar();
                 }
-                Limpiar();
+
             }
-          
+
         }
 
         private void buttonNuevo_Click(object sender, EventArgs e)
@@ -353,7 +363,7 @@ namespace BarbershopTech.Registros
                 {
                     errorProvider1.SetError(textBoxfacturaId, "Favor Llenar");
                 }
-                else 
+                else
                 {
                     TipoServicios producto = BLL.TipoServicioBLL.Buscar(p => p.ServicioId == id);
 
@@ -370,7 +380,7 @@ namespace BarbershopTech.Registros
                     }
                 }
 
-               
+
             }
 
         }
@@ -460,38 +470,13 @@ namespace BarbershopTech.Registros
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            fila = dataGridView1.CurrentRow.Index;
-
-            ProductoIdtextBox.Text = dataGridView1[0, fila].Value.ToString();
-            NombreProductotextBox.Text = dataGridView1[1, fila].Value.ToString();
-            PrecioProductotextBox.Text = dataGridView1[2, fila].Value.ToString();
-            buttonBuscar.Enabled = false;
-            Eliminarbutton.Enabled = false;
+          
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Delete)
-            {
-                fila = dataGridView1.CurrentRow.Index;
-
-                DialogResult dialogResult = MessageBox.Show("Desea Eliminarlo?", "Servicios", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    //dataGridView1.Rows.RemoveAt(fila);
-                    dataGridView1.Refresh();
-
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    MessageBox.Show("Cancelado");
-                }
-            }
-
+            
         }
-
-
-
 
         private void label16_Click(object sender, EventArgs e)
         {
@@ -535,8 +520,8 @@ namespace BarbershopTech.Registros
 
         private void textBoxfacturaId_KeyDown(object sender, KeyEventArgs e)
         {
-           
-            
+
+
         }
     }
 }

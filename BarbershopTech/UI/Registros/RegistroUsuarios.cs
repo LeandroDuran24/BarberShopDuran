@@ -149,33 +149,42 @@ namespace BarbershopTech.Registros
             }
             else
             {
-                int id = int.Parse(textBoxId.Text);
-                usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
-
-                if (usuario != null)
+                DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    if (usuario.UsuarioId == 1)
+
+                    int id = int.Parse(textBoxId.Text);
+                    usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
+
+                    if (usuario != null)
                     {
-                        MessageBox.Show("No se Puede Eliminar este Usuario");
+                        if (usuario.UsuarioId == 1)
+                        {
+                            MessageBox.Show("No se Puede Eliminar este Usuario");
+                        }
+                        else
+                        {
+                            BLL.UsuarioBLL.Eliminar(usuario);
+                            MessageBox.Show("Correcto");
+                        }
+
+
                     }
                     else
                     {
-                        BLL.UsuarioBLL.Eliminar(usuario);
-                        MessageBox.Show("Correcto");
+                        MessageBox.Show("No existe");
+
                     }
-
-
+                    Limpiar();
                 }
-                else
+
+
+                else if (dialogResult == DialogResult.No)
                 {
-                    MessageBox.Show("No existe");
+                    MessageBox.Show("Cancelado...");
                     Limpiar();
                 }
             }
-
-
-
-            Limpiar();
         }
 
         private void Registrarbutton_Click(object sender, EventArgs e)
@@ -280,7 +289,7 @@ namespace BarbershopTech.Registros
                         Limpiar();
                     }
                 }
-               
+
             }
         }
 
