@@ -81,20 +81,30 @@ namespace BarbershopTech.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(PeluqueroidtextBox.Text);
-            peluquero = BLL.PeluqueroBLL.Buscar((p => p.PeluqueroId == id));
-
-            if (peluquero != null)
+            if (string.IsNullOrEmpty(PeluqueroidtextBox.Text))
             {
-                BLL.PeluqueroBLL.Eliminar(peluquero);
-                MessageBox.Show("Se ha eliminado Correctamente");
+                errorProvider1.SetError(PeluqueroidtextBox, "Favor Llenar");
             }
             else
             {
-                MessageBox.Show("No se ha Eliminado");
+                int id = int.Parse(PeluqueroidtextBox.Text);
+                peluquero = BLL.PeluqueroBLL.Buscar((p => p.PeluqueroId == id));
 
+                if (peluquero != null)
+                {
+
+                    BLL.PeluqueroBLL.Eliminar(peluquero);
+                    MessageBox.Show("Se ha Eliminado correctamente");
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha Eliminado");
+
+                }
+                Limpiar();
             }
-            Limpiar();
+
 
         }
 
@@ -126,6 +136,7 @@ namespace BarbershopTech.Registros
                 }
 
                 Limpiar();
+                nombretextBox3.Focus();
             }
         }
 
@@ -136,19 +147,28 @@ namespace BarbershopTech.Registros
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(PeluqueroidtextBox.Text);
-            peluquero = BLL.PeluqueroBLL.Buscar((p => p.PeluqueroId == id));
-
-            if (peluquero != null)
+            if (string.IsNullOrEmpty(PeluqueroidtextBox.Text))
             {
-                nombretextBox3.Text = peluquero.Nombre;
-                
+                errorProvider1.SetError(PeluqueroidtextBox, "Favor Llenar");
             }
             else
             {
-                MessageBox.Show("No existe");
+                int id = int.Parse(PeluqueroidtextBox.Text);
+                peluquero = BLL.PeluqueroBLL.Buscar((p => p.PeluqueroId == id));
 
+                if (peluquero != null)
+                {
+                    nombretextBox3.Text = peluquero.Nombre;
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                    Limpiar();
+
+                }
             }
+
 
         }
 
@@ -193,6 +213,31 @@ namespace BarbershopTech.Registros
         private void PeluqueroidtextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumero(e);
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(PeluqueroidtextBox.Text))
+                {
+                    errorProvider1.SetError(PeluqueroidtextBox, "Favor Llenar");
+                }
+                else
+                {
+                    int id = int.Parse(PeluqueroidtextBox.Text);
+                    peluquero = BLL.PeluqueroBLL.Buscar((p => p.PeluqueroId == id));
+
+                    if (peluquero != null)
+                    {
+                        nombretextBox3.Text = peluquero.Nombre;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe");
+                        Limpiar();
+
+                    }
+                }
+
+            }
         }
     }
 }

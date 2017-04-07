@@ -105,6 +105,7 @@
             // dateTimePickerHasta
             // 
             this.dateTimePickerHasta.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePickerHasta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerHasta.CustomFormat = "yyy/MM/dd";
             this.dateTimePickerHasta.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -117,6 +118,7 @@
             // dateTimePickerDesde
             // 
             this.dateTimePickerDesde.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePickerDesde.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerDesde.CustomFormat = "yyy/MM/dd";
             this.dateTimePickerDesde.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -147,6 +149,7 @@
             // buttonBuscar
             // 
             this.buttonBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.Image")));
@@ -162,6 +165,7 @@
             // 
             // NombrecomboBox
             // 
+            this.NombrecomboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NombrecomboBox.ForeColor = System.Drawing.Color.Black;
             this.NombrecomboBox.FormattingEnabled = true;
             this.NombrecomboBox.Location = new System.Drawing.Point(129, 56);
@@ -172,6 +176,7 @@
             // 
             // IdtextBox
             // 
+            this.IdtextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IdtextBox.Location = new System.Drawing.Point(129, 28);
             this.IdtextBox.MaxLength = 10;
             this.IdtextBox.Name = "IdtextBox";
@@ -195,6 +200,7 @@
             // 
             // PeluquerocomboBox
             // 
+            this.PeluquerocomboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PeluquerocomboBox.ForeColor = System.Drawing.Color.Black;
             this.PeluquerocomboBox.FormattingEnabled = true;
             this.PeluquerocomboBox.Location = new System.Drawing.Point(129, 88);
@@ -235,6 +241,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Eliminarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Eliminarbutton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.ForeColor = System.Drawing.Color.White;
@@ -252,6 +259,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Guardarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Guardarbutton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.ForeColor = System.Drawing.Color.White;
@@ -273,6 +281,7 @@
             // buttonNuevo
             // 
             this.buttonNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.buttonNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNuevo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNuevo.ForeColor = System.Drawing.Color.White;

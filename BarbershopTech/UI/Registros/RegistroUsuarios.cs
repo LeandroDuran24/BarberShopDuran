@@ -143,30 +143,36 @@ namespace BarbershopTech.Registros
 
         private void Eliminarbutton1_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textBoxId.Text);
-
-            usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
-
-            if (usuario != null)
+            if (string.IsNullOrEmpty(textBoxId.Text))
             {
-                if (usuario.UsuarioId == 1)
+                errorProvider1.SetError(textBoxId, "Favor Llenar");
+            }
+            else
+            {
+                int id = int.Parse(textBoxId.Text);
+                usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
+
+                if (usuario != null)
                 {
-                    MessageBox.Show("No se Puede Eliminar este Usuario");
+                    if (usuario.UsuarioId == 1)
+                    {
+                        MessageBox.Show("No se Puede Eliminar este Usuario");
+                    }
+                    else
+                    {
+                        BLL.UsuarioBLL.Eliminar(usuario);
+                        MessageBox.Show("Correcto");
+                    }
 
 
                 }
                 else
                 {
-                    BLL.UsuarioBLL.Eliminar(usuario);
-                    MessageBox.Show("Correcto");
+                    MessageBox.Show("No existe");
+                    Limpiar();
                 }
-
-
             }
-            else
-            {
-                MessageBox.Show("No existe");
-            }
+
 
 
             Limpiar();
@@ -204,28 +210,38 @@ namespace BarbershopTech.Registros
                     }
                 }
                 Limpiar();
+                NombretextBox.Focus();
 
             }
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textBoxId.Text);
-            usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
-
-            if (usuario != null)
+            if (string.IsNullOrEmpty(textBoxId.Text))
             {
-                EmailtextBox.Text = usuario.Email;
-                NombretextBox.Text = usuario.Nombres;
-                ContraseñamaskedTextBox.Text = Convert.ToString(usuario.Contrasena);
-                ConfirmarmaskedTextBox.Text = Convert.ToString(usuario.Confirmar);
-                comboBox1.Text = usuario.Tipo;
-
+                errorProvider1.SetError(textBoxId, "Favor Llenar");
             }
             else
             {
-                MessageBox.Show("No existe");
+                int id = int.Parse(textBoxId.Text);
+                usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
+
+                if (usuario != null)
+                {
+                    EmailtextBox.Text = usuario.Email;
+                    NombretextBox.Text = usuario.Nombres;
+                    ContraseñamaskedTextBox.Text = Convert.ToString(usuario.Contrasena);
+                    ConfirmarmaskedTextBox.Text = Convert.ToString(usuario.Confirmar);
+                    comboBox1.Text = usuario.Tipo;
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                    Limpiar();
+                }
             }
+
 
         }
 
@@ -237,6 +253,35 @@ namespace BarbershopTech.Registros
         private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarLetras(e);
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(textBoxId.Text))
+                {
+                    errorProvider1.SetError(textBoxId, "Favor Llenar");
+                }
+                else
+                {
+                    int id = int.Parse(textBoxId.Text);
+                    usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
+
+                    if (usuario != null)
+                    {
+                        EmailtextBox.Text = usuario.Email;
+                        NombretextBox.Text = usuario.Nombres;
+                        ContraseñamaskedTextBox.Text = Convert.ToString(usuario.Contrasena);
+                        ConfirmarmaskedTextBox.Text = Convert.ToString(usuario.Confirmar);
+                        comboBox1.Text = usuario.Tipo;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe");
+                        Limpiar();
+                    }
+                }
+               
+            }
         }
 
         private void EmailtextBox_KeyPress(object sender, KeyPressEventArgs e)

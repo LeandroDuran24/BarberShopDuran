@@ -115,26 +115,36 @@ namespace BarbershopTech.Registros
                 }
 
                 Limpiar();
+                nombretextBox3.Focus();
             }
 
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(idSeriviciotextBox.Text);
-            servicio = BLL.TipoServicioBLL.Buscar((p => p.ServicioId == id));
-
-            if (servicio != null)
+            if (string.IsNullOrEmpty(idSeriviciotextBox.Text))
             {
-                BLL.TipoServicioBLL.Eliminar(servicio);
-                MessageBox.Show("Se ha eliminado Correctamente");
+                errorProvider1.SetError(idSeriviciotextBox, "Favor Llenar");
+
             }
             else
             {
-                MessageBox.Show("No existe");
+                int id = int.Parse(idSeriviciotextBox.Text);
+                servicio = BLL.TipoServicioBLL.Buscar((p => p.ServicioId == id));
 
+                if (servicio != null)
+                {
+                    BLL.TipoServicioBLL.Eliminar(servicio);
+                    MessageBox.Show("Se ha eliminado Correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+
+                }
+                Limpiar();
             }
-            Limpiar();
+
         }
 
         private void buttonNuevo_Click(object sender, EventArgs e)
@@ -144,26 +154,64 @@ namespace BarbershopTech.Registros
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(idSeriviciotextBox.Text);
-            servicio = BLL.TipoServicioBLL.Buscar((p => p.ServicioId == id));
-
-            if (servicio != null)
+            if (string.IsNullOrEmpty(idSeriviciotextBox.Text))
             {
-                nombretextBox3.Text = servicio.Nombre;
-                CostoTexBox.Text = Convert.ToString(servicio.Costo);
+                errorProvider1.SetError(idSeriviciotextBox, "Favor Llenar");
 
-               
             }
             else
             {
-                MessageBox.Show("No existe");
+                int id = int.Parse(idSeriviciotextBox.Text);
+                servicio = BLL.TipoServicioBLL.Buscar((p => p.ServicioId == id));
 
+                if (servicio != null)
+                {
+                    nombretextBox3.Text = servicio.Nombre;
+                    CostoTexBox.Text = Convert.ToString(servicio.Costo);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                    Limpiar();
+
+                }
             }
+
         }
 
         private void idSeriviciotextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumero(e);
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(idSeriviciotextBox.Text))
+                {
+                    errorProvider1.SetError(idSeriviciotextBox, "Favor Llenar");
+
+                }
+                else
+                {
+                    int id = int.Parse(idSeriviciotextBox.Text);
+                    servicio = BLL.TipoServicioBLL.Buscar((p => p.ServicioId == id));
+
+                    if (servicio != null)
+                    {
+                        nombretextBox3.Text = servicio.Nombre;
+                        CostoTexBox.Text = Convert.ToString(servicio.Costo);
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe");
+                        Limpiar();
+
+                    }
+                }
+
+            }
         }
 
         private void nombretextBox3_KeyPress(object sender, KeyPressEventArgs e)

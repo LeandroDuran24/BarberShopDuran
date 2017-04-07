@@ -50,6 +50,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(297, 56);
             this.label4.Name = "label4";
@@ -61,6 +62,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(36, 50);
             this.label3.Name = "label3";
@@ -70,6 +72,7 @@
             // 
             // hastadateTimePicker
             // 
+            this.hastadateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hastadateTimePicker.CustomFormat = "yyy/MM/dd";
             this.hastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.hastadateTimePicker.Location = new System.Drawing.Point(370, 52);
@@ -79,6 +82,7 @@
             // 
             // desdedateTimePicker
             // 
+            this.desdedateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.desdedateTimePicker.CustomFormat = "yyy/MM/dd";
             this.desdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.desdedateTimePicker.Location = new System.Drawing.Point(128, 50);
@@ -90,6 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(287, 30);
             this.label2.Name = "label2";
@@ -101,6 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 23);
             this.label1.Name = "label1";
@@ -110,6 +116,7 @@
             // 
             // BuscartextBox
             // 
+            this.BuscartextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BuscartextBox.Location = new System.Drawing.Point(369, 25);
             this.BuscartextBox.Name = "BuscartextBox";
             this.BuscartextBox.Size = new System.Drawing.Size(154, 20);
@@ -118,6 +125,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(128, 23);

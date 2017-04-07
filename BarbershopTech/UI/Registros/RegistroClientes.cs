@@ -18,6 +18,11 @@ namespace BarbershopTech.Registros
             InitializeComponent();
         }
 
+        private void RegistroClientes_Load(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
         public bool Validar()
         {
             if (string.IsNullOrEmpty(nombretextBox.Text))
@@ -37,6 +42,7 @@ namespace BarbershopTech.Registros
 
         public void Limpiar()
         {
+            IdtextBox.Clear();
             nombretextBox.Clear();
             direcciontextBox1.Clear();
             apellidotextBox.Clear();
@@ -106,20 +112,29 @@ namespace BarbershopTech.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(IdtextBox.Text);
-            Clientes conn = BLL.ClienteBLL.Buscar((p => p.ClienteId == id));
-
-            if (conn != null)
+            if (string.IsNullOrEmpty(IdtextBox.Text))
             {
-                BLL.ClienteBLL.Eliminar(conn);
-                MessageBox.Show("Se ha eliminado Correctamente");
-            }
-            else
-            {
-                MessageBox.Show("No se ha Eliminado");
+                errorProvider1.SetError(IdtextBox, "Favor Llenar");
 
             }
-            Limpiar();
+            else 
+            {
+                int id = int.Parse(IdtextBox.Text);
+                Clientes conn = BLL.ClienteBLL.Buscar((p => p.ClienteId == id));
+
+                if (conn != null)
+                {
+                    BLL.ClienteBLL.Eliminar(conn);
+                    MessageBox.Show("Se ha eliminado Correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se ha Eliminado");
+
+                }
+                Limpiar();
+            }
+            
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
@@ -147,31 +162,42 @@ namespace BarbershopTech.Registros
                 }
 
                 Limpiar();
+                nombretextBox.Focus();
             }
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(IdtextBox.Text);
-            cliente = BLL.ClienteBLL.Buscar((p => p.ClienteId == id));
-
-            if (cliente != null)
+            if (string.IsNullOrEmpty(IdtextBox.Text))
             {
-                nombretextBox.Text = cliente.Nombres;
-                direcciontextBox1.Text = cliente.Direccion;
-                apellidotextBox.Text = cliente.Apellidos;
-                emailextBox.Text = cliente.Email;
-                cedmaskedTextBox.Text = cliente.Cedula;
-                FechadateTimePicker1.Value = cliente.Fecha;
+                errorProvider1.SetError(IdtextBox, "Favor Llenar");
 
-                
             }
             else
             {
-                MessageBox.Show("No existe");
+                int id = int.Parse(IdtextBox.Text);
+                cliente = BLL.ClienteBLL.Buscar((p => p.ClienteId == id));
 
+                if (cliente != null)
+                {
+                    nombretextBox.Text = cliente.Nombres;
+                    direcciontextBox1.Text = cliente.Direccion;
+                    apellidotextBox.Text = cliente.Apellidos;
+                    emailextBox.Text = cliente.Email;
+                    cedmaskedTextBox.Text = cliente.Cedula;
+                    FechadateTimePicker1.Value = cliente.Fecha;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                    Limpiar();
+
+                }
             }
-   
+
+
         }
 
         private void buttonNuevo_Click(object sender, EventArgs e)
@@ -182,6 +208,39 @@ namespace BarbershopTech.Registros
         private void IdtextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumero(e);
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(IdtextBox.Text))
+                {
+                    errorProvider1.SetError(IdtextBox, "Favor Llenar");
+
+                }
+                else
+                {
+                    int id = int.Parse(IdtextBox.Text);
+                    cliente = BLL.ClienteBLL.Buscar((p => p.ClienteId == id));
+
+                    if (cliente != null)
+                    {
+                        nombretextBox.Text = cliente.Nombres;
+                        direcciontextBox1.Text = cliente.Direccion;
+                        apellidotextBox.Text = cliente.Apellidos;
+                        emailextBox.Text = cliente.Email;
+                        cedmaskedTextBox.Text = cliente.Cedula;
+                        FechadateTimePicker1.Value = cliente.Fecha;
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe");
+                        Limpiar();
+
+                    }
+                }
+
+            }
         }
 
         private void nombretextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -197,11 +256,6 @@ namespace BarbershopTech.Registros
         private void direcciontextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarLetras(e);
-        }
-
-        private void RegistroClientes_Load(object sender, EventArgs e)
-        {
-            Limpiar();
         }
 
         private void FechadateTimePicker1_KeyPress(object sender, KeyPressEventArgs e)

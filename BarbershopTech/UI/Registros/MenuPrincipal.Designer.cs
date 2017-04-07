@@ -77,7 +77,7 @@
             this.empleadosToolStripMenuItem,
             this.serviciosToolStripMenuItem});
             this.registrosToolStripMenuItem.Font = new System.Drawing.Font("Brush Script MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrosToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.registrosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(86, 23);
             this.registrosToolStripMenuItem.Text = "Registros    ";
@@ -86,7 +86,7 @@
             // 
             this.registrarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarUsuariosToolStripMenuItem.Image")));
             this.registrarUsuariosToolStripMenuItem.Name = "registrarUsuariosToolStripMenuItem";
-            this.registrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.registrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.registrarUsuariosToolStripMenuItem.Text = "Usuarios";
             this.registrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuariosToolStripMenuItem_Click);
             // 
@@ -94,7 +94,7 @@
             // 
             this.registroClientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroClientesToolStripMenuItem.Image")));
             this.registroClientesToolStripMenuItem.Name = "registroClientesToolStripMenuItem";
-            this.registroClientesToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.registroClientesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.registroClientesToolStripMenuItem.Text = "Clientes";
             this.registroClientesToolStripMenuItem.Click += new System.EventHandler(this.registroClientesToolStripMenuItem_Click);
             // 
@@ -102,7 +102,7 @@
             // 
             this.empleadosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empleadosToolStripMenuItem.Image")));
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.empleadosToolStripMenuItem.Text = "Peluqueros";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -112,7 +112,7 @@
             this.serviciosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("serviciosToolStripMenuItem.Image")));
             this.serviciosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
@@ -126,7 +126,7 @@
             this.serviciosToolStripMenuItem1,
             this.facturasToolStripMenuItem});
             this.consultasToolStripMenuItem.Font = new System.Drawing.Font("Brush Script MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consultasToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.consultasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
             this.consultasToolStripMenuItem.Text = "Consultas    ";
@@ -135,7 +135,7 @@
             // 
             this.consultaDeUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaDeUsuariosToolStripMenuItem.Image")));
             this.consultaDeUsuariosToolStripMenuItem.Name = "consultaDeUsuariosToolStripMenuItem";
-            this.consultaDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.consultaDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.consultaDeUsuariosToolStripMenuItem.Text = "Usuarios";
             this.consultaDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeUsuariosToolStripMenuItem_Click);
             // 
@@ -143,7 +143,7 @@
             // 
             this.consultaEmpleadosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaEmpleadosToolStripMenuItem.Image")));
             this.consultaEmpleadosToolStripMenuItem.Name = "consultaEmpleadosToolStripMenuItem";
-            this.consultaEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.consultaEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.consultaEmpleadosToolStripMenuItem.Text = "Clientes";
             this.consultaEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.consultaEmpleadosToolStripMenuItem_Click);
             // 
@@ -151,7 +151,7 @@
             // 
             this.consultaDeTurnosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaDeTurnosToolStripMenuItem.Image")));
             this.consultaDeTurnosToolStripMenuItem.Name = "consultaDeTurnosToolStripMenuItem";
-            this.consultaDeTurnosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.consultaDeTurnosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.consultaDeTurnosToolStripMenuItem.Text = "Turnos";
             this.consultaDeTurnosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeTurnosToolStripMenuItem_Click);
             // 
@@ -159,7 +159,7 @@
             // 
             this.consultaDePeluquerosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaDePeluquerosToolStripMenuItem.Image")));
             this.consultaDePeluquerosToolStripMenuItem.Name = "consultaDePeluquerosToolStripMenuItem";
-            this.consultaDePeluquerosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.consultaDePeluquerosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.consultaDePeluquerosToolStripMenuItem.Text = "Peluqueros";
             this.consultaDePeluquerosToolStripMenuItem.Click += new System.EventHandler(this.consultaDePeluquerosToolStripMenuItem_Click);
             // 
@@ -168,7 +168,7 @@
             this.serviciosToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("serviciosToolStripMenuItem1.Image")));
             this.serviciosToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.serviciosToolStripMenuItem1.Name = "serviciosToolStripMenuItem1";
-            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(135, 24);
+            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.serviciosToolStripMenuItem1.Text = "Servicios";
             this.serviciosToolStripMenuItem1.Click += new System.EventHandler(this.serviciosToolStripMenuItem1_Click);
             // 
@@ -176,14 +176,14 @@
             // 
             this.facturasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturasToolStripMenuItem.Image")));
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.facturasToolStripMenuItem.Text = "Facturas";
             this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // turnosToolStripMenuItem
             // 
             this.turnosToolStripMenuItem.Font = new System.Drawing.Font("Brush Script MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turnosToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.turnosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.turnosToolStripMenuItem.Name = "turnosToolStripMenuItem";
             this.turnosToolStripMenuItem.Size = new System.Drawing.Size(81, 23);
             this.turnosToolStripMenuItem.Text = "Turnos      ";
@@ -192,7 +192,7 @@
             // facturarToolStripMenuItem
             // 
             this.facturarToolStripMenuItem.Font = new System.Drawing.Font("Brush Script MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facturarToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.facturarToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.facturarToolStripMenuItem.Name = "facturarToolStripMenuItem";
             this.facturarToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
             this.facturarToolStripMenuItem.Text = "Facturar   ";
@@ -201,7 +201,7 @@
             // cambiarCuentaToolStripMenuItem
             // 
             this.cambiarCuentaToolStripMenuItem.Font = new System.Drawing.Font("Brush Script MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cambiarCuentaToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.cambiarCuentaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cambiarCuentaToolStripMenuItem.Name = "cambiarCuentaToolStripMenuItem";
             this.cambiarCuentaToolStripMenuItem.Size = new System.Drawing.Size(107, 23);
             this.cambiarCuentaToolStripMenuItem.Text = "Cambiar Cuenta";
@@ -210,7 +210,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Brush Script MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.salirToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));

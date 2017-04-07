@@ -46,6 +46,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(258, 37);
             this.label2.Name = "label2";
@@ -57,6 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
@@ -66,6 +68,7 @@
             // 
             // BuscartextBox
             // 
+            this.BuscartextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BuscartextBox.Location = new System.Drawing.Point(342, 36);
             this.BuscartextBox.Name = "BuscartextBox";
             this.BuscartextBox.Size = new System.Drawing.Size(154, 20);
@@ -74,6 +77,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(99, 36);

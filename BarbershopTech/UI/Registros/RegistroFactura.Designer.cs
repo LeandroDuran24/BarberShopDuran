@@ -52,8 +52,8 @@
             this.PrecioProductotextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxPago = new System.Windows.Forms.TextBox();
             this.buttonCrear = new System.Windows.Forms.Button();
-            this.comboBoxPago = new System.Windows.Forms.ComboBox();
             this.labelAtendido = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -99,15 +99,18 @@
             // 
             // textBoxfacturaId
             // 
+            this.textBoxfacturaId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxfacturaId.Location = new System.Drawing.Point(94, 14);
             this.textBoxfacturaId.Name = "textBoxfacturaId";
             this.textBoxfacturaId.Size = new System.Drawing.Size(100, 20);
             this.textBoxfacturaId.TabIndex = 51;
+            this.textBoxfacturaId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxfacturaId_KeyDown);
             this.textBoxfacturaId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxfacturaId_KeyPress);
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.Image")));
@@ -123,6 +126,7 @@
             // dateTimePickerDesde
             // 
             this.dateTimePickerDesde.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePickerDesde.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerDesde.CustomFormat = "yyy/MM/dd";
             this.dateTimePickerDesde.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDesde.Location = new System.Drawing.Point(34, 11);
@@ -140,10 +144,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(480, 178);
             this.dataGridView1.TabIndex = 81;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // buttonAgregar
             // 
             this.buttonAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAgregar.Image")));
@@ -160,6 +167,8 @@
             // buttonNew
             // 
             this.buttonNew.BackColor = System.Drawing.Color.Transparent;
+            this.buttonNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNew.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNew.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNew.Image = ((System.Drawing.Image)(resources.GetObject("buttonNew.Image")));
@@ -176,6 +185,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Eliminarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Eliminarbutton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
@@ -192,6 +202,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Guardarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Guardarbutton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
@@ -208,6 +219,7 @@
             // textBoxTotal
             // 
             this.textBoxTotal.BackColor = System.Drawing.Color.White;
+            this.textBoxTotal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxTotal.ForeColor = System.Drawing.Color.Lime;
             this.textBoxTotal.Location = new System.Drawing.Point(109, 54);
             this.textBoxTotal.Multiline = true;
@@ -219,6 +231,7 @@
             // textBoxSub
             // 
             this.textBoxSub.BackColor = System.Drawing.Color.White;
+            this.textBoxSub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxSub.ForeColor = System.Drawing.Color.Red;
             this.textBoxSub.Location = new System.Drawing.Point(109, 19);
             this.textBoxSub.Multiline = true;
@@ -290,6 +303,7 @@
             // ProductoIdtextBox
             // 
             this.ProductoIdtextBox.BackColor = System.Drawing.Color.White;
+            this.ProductoIdtextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductoIdtextBox.Location = new System.Drawing.Point(131, 32);
             this.ProductoIdtextBox.Name = "ProductoIdtextBox";
             this.ProductoIdtextBox.Size = new System.Drawing.Size(72, 24);
@@ -299,6 +313,7 @@
             // NombreProductotextBox
             // 
             this.NombreProductotextBox.BackColor = System.Drawing.Color.White;
+            this.NombreProductotextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NombreProductotextBox.Enabled = false;
             this.NombreProductotextBox.Location = new System.Drawing.Point(250, 32);
             this.NombreProductotextBox.Name = "NombreProductotextBox";
@@ -319,6 +334,7 @@
             // PrecioProductotextBox
             // 
             this.PrecioProductotextBox.BackColor = System.Drawing.Color.White;
+            this.PrecioProductotextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PrecioProductotextBox.Enabled = false;
             this.PrecioProductotextBox.Location = new System.Drawing.Point(506, 32);
             this.PrecioProductotextBox.Name = "PrecioProductotextBox";
@@ -340,8 +356,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.textBoxPago);
             this.groupBox3.Controls.Add(this.buttonCrear);
-            this.groupBox3.Controls.Add(this.comboBoxPago);
             this.groupBox3.Controls.Add(this.labelAtendido);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label11);
@@ -362,9 +378,22 @@
             this.groupBox3.Text = "Cliente";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // textBoxPago
+            // 
+            this.textBoxPago.BackColor = System.Drawing.Color.White;
+            this.textBoxPago.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxPago.ForeColor = System.Drawing.Color.Black;
+            this.textBoxPago.Location = new System.Drawing.Point(115, 81);
+            this.textBoxPago.Name = "textBoxPago";
+            this.textBoxPago.ReadOnly = true;
+            this.textBoxPago.Size = new System.Drawing.Size(314, 25);
+            this.textBoxPago.TabIndex = 94;
+            this.textBoxPago.Text = "Contado";
+            // 
             // buttonCrear
             // 
             this.buttonCrear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCrear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrear.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrear.Image = ((System.Drawing.Image)(resources.GetObject("buttonCrear.Image")));
@@ -376,16 +405,6 @@
             this.buttonCrear.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.buttonCrear.UseVisualStyleBackColor = false;
             this.buttonCrear.Click += new System.EventHandler(this.buttonCrear_Click);
-            // 
-            // comboBoxPago
-            // 
-            this.comboBoxPago.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxPago.FormattingEnabled = true;
-            this.comboBoxPago.Location = new System.Drawing.Point(115, 80);
-            this.comboBoxPago.Name = "comboBoxPago";
-            this.comboBoxPago.Size = new System.Drawing.Size(317, 26);
-            this.comboBoxPago.TabIndex = 94;
-            this.comboBoxPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxPago_KeyPress);
             // 
             // labelAtendido
             // 
@@ -436,16 +455,18 @@
             // 
             // textBoxComentario
             // 
+            this.textBoxComentario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxComentario.Location = new System.Drawing.Point(115, 112);
             this.textBoxComentario.Multiline = true;
             this.textBoxComentario.Name = "textBoxComentario";
-            this.textBoxComentario.Size = new System.Drawing.Size(320, 91);
+            this.textBoxComentario.Size = new System.Drawing.Size(314, 91);
             this.textBoxComentario.TabIndex = 84;
             this.textBoxComentario.TextChanged += new System.EventHandler(this.textBoxComentario_TextChanged);
             // 
             // textBoxPorcientoDescuento
             // 
             this.textBoxPorcientoDescuento.BackColor = System.Drawing.Color.White;
+            this.textBoxPorcientoDescuento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxPorcientoDescuento.ForeColor = System.Drawing.Color.Black;
             this.textBoxPorcientoDescuento.Location = new System.Drawing.Point(620, 148);
             this.textBoxPorcientoDescuento.Name = "textBoxPorcientoDescuento";
@@ -456,6 +477,7 @@
             // 
             // textBoxImpuesto
             // 
+            this.textBoxImpuesto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxImpuesto.Location = new System.Drawing.Point(620, 180);
             this.textBoxImpuesto.Name = "textBoxImpuesto";
             this.textBoxImpuesto.Size = new System.Drawing.Size(123, 25);
@@ -492,6 +514,7 @@
             // 
             // comboBoxNombre
             // 
+            this.comboBoxNombre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxNombre.ForeColor = System.Drawing.Color.Black;
             this.comboBoxNombre.FormattingEnabled = true;
             this.comboBoxNombre.Location = new System.Drawing.Point(115, 49);
@@ -535,6 +558,7 @@
             // textBoxDevuelta
             // 
             this.textBoxDevuelta.BackColor = System.Drawing.Color.White;
+            this.textBoxDevuelta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxDevuelta.ForeColor = System.Drawing.Color.Aqua;
             this.textBoxDevuelta.Location = new System.Drawing.Point(109, 131);
             this.textBoxDevuelta.Multiline = true;
@@ -546,6 +570,7 @@
             // textBoxMonto
             // 
             this.textBoxMonto.BackColor = System.Drawing.Color.White;
+            this.textBoxMonto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.textBoxMonto.Location = new System.Drawing.Point(109, 96);
             this.textBoxMonto.Multiline = true;
@@ -710,9 +735,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelAtendido;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxPago;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button buttonCrear;
+        private System.Windows.Forms.TextBox textBoxPago;
     }
 }

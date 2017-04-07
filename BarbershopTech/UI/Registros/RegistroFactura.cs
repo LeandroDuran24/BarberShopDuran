@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,14 +23,9 @@ namespace BarbershopTech.Registros
             Limpiar();
             LlenarComboNombre();
             LlenarLabel();
-            LlenarComboPago();
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void RegistroFactura_Load(object sender, EventArgs e)
         {
@@ -52,6 +48,11 @@ namespace BarbershopTech.Registros
             if (string.IsNullOrEmpty(ProductoIdtextBox.Text))
             {
                 errorProvider1.SetError(ProductoIdtextBox, "Favor Llenar");
+                return false;
+            }
+            if (string.IsNullOrEmpty(textBoxMonto.Text))
+            {
+                errorProvider1.SetError(textBoxMonto, "Favor Llenar");
                 return false;
             }
 
@@ -105,13 +106,12 @@ namespace BarbershopTech.Registros
         {
 
             comboBoxNombre.Text = null;
+            textBoxfacturaId.Clear();
             textBoxComentario.Clear();
             textBoxPorcientoDescuento.Clear();
             textBoxImpuesto.Clear();
             textBoxTotal.Clear();
             textBoxSub.Clear();
-            textBoxfacturaId.Clear();
-            comboBoxPago.Text = null;
             ProductoIdtextBox.Clear();
             NombreProductotextBox.Clear();
             PrecioProductotextBox.Clear();
@@ -134,16 +134,7 @@ namespace BarbershopTech.Registros
                 comboBoxNombre.SelectedIndex = -1;
         }
 
-        public void LlenarComboPago()
-        {
 
-            comboBoxPago.Items.Insert(0, "Contado");
-            comboBoxPago.DataSource = comboBoxPago.Items;
-            comboBoxPago.DisplayMember = "Contado";
-
-            if (comboBoxPago.Items.Count > 0)
-                comboBoxPago.SelectedIndex = -1;
-        }
 
         public Facturas LlenarCampos()
         {
@@ -157,10 +148,10 @@ namespace BarbershopTech.Registros
             factura.Impuesto = Utilidades.TOINT(textBoxImpuesto.Text);
             factura.SubTotal = Utilidades.TOINT(textBoxSub.Text);
             factura.Total = Utilidades.TOINT(textBoxTotal.Text);
-            factura.TipoPago = comboBoxPago.Text;
-            factura.Atendido =InicioSesion.Label().Nombres;
-
             factura.TipoPago = "Contado";
+            factura.Atendido = InicioSesion.Label().Nombres;
+
+
 
             return factura;
         }
@@ -169,9 +160,8 @@ namespace BarbershopTech.Registros
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = nueva.ServicioList;
-            //this.dataGridView1.Columns["ServicioId"].Visible = false;
+            this.dataGridView1.Columns["ServicioId"].Visible = false;
         }
-
 
         public void SacarCuenta()
         {
@@ -234,7 +224,7 @@ namespace BarbershopTech.Registros
                     BLL.FacturaBLL.Mofidicar(factura);
 
                     MessageBox.Show("Se ha Modificado");
-                    // dataGridView1.Rows.RemoveAt(fila);
+
                 }
                 else
                 {
@@ -244,6 +234,7 @@ namespace BarbershopTech.Registros
 
             }
             Limpiar();
+            comboBoxNombre.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -253,42 +244,61 @@ namespace BarbershopTech.Registros
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textBoxfacturaId.Text);
-            factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
-            if (factura != null)
+            if (string.IsNullOrEmpty(textBoxfacturaId.Text))
             {
-                comboBoxNombre.Text = factura.NombreCliente;
-                textBoxComentario.Text = factura.Comentario;
-                textBoxPorcientoDescuento.Text = Convert.ToString(factura.DescuentoPorciento.ToString());
-                textBoxImpuesto.Text = Convert.ToString(factura.Impuesto.ToString());
-                comboBoxPago.Text = factura.TipoPago;
-                textBoxSub.Text = Convert.ToString(factura.SubTotal.ToString());
-                textBoxTotal.Text = Convert.ToString(factura.Total.ToString());
-                LlenarDataGrid(factura);
-
+                errorProvider1.SetError(textBoxfacturaId, "Favor Llenar");
             }
             else
             {
-                MessageBox.Show("No existe");
+                int id = int.Parse(textBoxfacturaId.Text);
+                factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
+                if (factura != null)
+                {
+                    comboBoxNombre.Text = factura.NombreCliente;
+                    textBoxComentario.Text = factura.Comentario;
+                    textBoxPorcientoDescuento.Text = Convert.ToString(factura.DescuentoPorciento.ToString());
+                    textBoxImpuesto.Text = Convert.ToString(factura.Impuesto.ToString());
+                    textBoxSub.Text = Convert.ToString(factura.SubTotal.ToString());
+                    textBoxTotal.Text = Convert.ToString(factura.Total.ToString());
+                    LlenarDataGrid(factura);
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                    Limpiar();
+
+                }
+               
             }
+
         }
 
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textBoxfacturaId.Text);
-            factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
-            if (factura != null)
+            if (string.IsNullOrEmpty(textBoxfacturaId.Text))
             {
-                BLL.FacturaBLL.Eliminar(factura);
-                MessageBox.Show("Se ha eliminado");
-
+                errorProvider1.SetError(textBoxfacturaId, "Favor Llenar");
             }
             else
             {
-                MessageBox.Show("Error");
+                int id = int.Parse(textBoxfacturaId.Text);
+                factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
+                if (factura != null)
+                {
+                    BLL.FacturaBLL.Eliminar(factura);
+                    MessageBox.Show("Se ha eliminado");
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                   
+                }
+                Limpiar();
             }
-            Limpiar();
+          
         }
 
         private void buttonNuevo_Click(object sender, EventArgs e)
@@ -339,18 +349,28 @@ namespace BarbershopTech.Registros
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                TipoServicios producto = BLL.TipoServicioBLL.Buscar(p => p.ServicioId == id);
-
-                if (producto != null)
+                if (string.IsNullOrEmpty(textBoxfacturaId.Text))
                 {
-                    NombreProductotextBox.Text = producto.Nombre;
-                    PrecioProductotextBox.Text = producto.Costo.ToString();
-
+                    errorProvider1.SetError(textBoxfacturaId, "Favor Llenar");
                 }
-                else
+                else 
                 {
-                    MessageBox.Show("No existe");
+                    TipoServicios producto = BLL.TipoServicioBLL.Buscar(p => p.ServicioId == id);
+
+                    if (producto != null)
+                    {
+                        NombreProductotextBox.Text = producto.Nombre;
+                        PrecioProductotextBox.Text = producto.Costo.ToString();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe");
+                        Limpiar();
+                    }
                 }
+
+               
             }
 
         }
@@ -378,6 +398,28 @@ namespace BarbershopTech.Registros
         private void textBoxfacturaId_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumero(e);
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                int id = int.Parse(textBoxfacturaId.Text);
+                factura = BLL.FacturaBLL.Buscar(p => p.FacturaId == id);
+                if (factura != null)
+                {
+                    comboBoxNombre.Text = factura.NombreCliente;
+                    textBoxComentario.Text = factura.Comentario;
+                    textBoxPorcientoDescuento.Text = Convert.ToString(factura.DescuentoPorciento.ToString());
+                    textBoxImpuesto.Text = Convert.ToString(factura.Impuesto.ToString());
+                    textBoxSub.Text = Convert.ToString(factura.SubTotal.ToString());
+                    textBoxTotal.Text = Convert.ToString(factura.Total.ToString());
+                    LlenarDataGrid(factura);
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                }
+            }
+
         }
 
         private void textBoxMonto_KeyPress(object sender, KeyPressEventArgs e)
@@ -416,6 +458,41 @@ namespace BarbershopTech.Registros
             e.Handled = true;
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fila = dataGridView1.CurrentRow.Index;
+
+            ProductoIdtextBox.Text = dataGridView1[0, fila].Value.ToString();
+            NombreProductotextBox.Text = dataGridView1[1, fila].Value.ToString();
+            PrecioProductotextBox.Text = dataGridView1[2, fila].Value.ToString();
+            buttonBuscar.Enabled = false;
+            Eliminarbutton.Enabled = false;
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                fila = dataGridView1.CurrentRow.Index;
+
+                DialogResult dialogResult = MessageBox.Show("Desea Eliminarlo?", "Servicios", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    //dataGridView1.Rows.RemoveAt(fila);
+                    dataGridView1.Refresh();
+
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("Cancelado");
+                }
+            }
+
+        }
+
+
+
+
         private void label16_Click(object sender, EventArgs e)
         {
 
@@ -446,24 +523,20 @@ namespace BarbershopTech.Registros
 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            fila = dataGridView1.CurrentRow.Index;
-
-            ProductoIdtextBox.Text = dataGridView1[0, fila].Value.ToString();
-            NombreProductotextBox.Text = dataGridView1[1, fila].Value.ToString();
-            PrecioProductotextBox.Text = dataGridView1[2, fila].Value.ToString();
-            buttonBuscar.Enabled = false;
-            Eliminarbutton.Enabled = false;
-
-        }
-
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void textBoxfacturaId_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+            
+        }
     }
 }

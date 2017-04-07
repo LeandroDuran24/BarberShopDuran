@@ -216,6 +216,7 @@
             // buttonNuevo
             // 
             this.buttonNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.buttonNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNuevo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNuevo.ForeColor = System.Drawing.Color.Transparent;
@@ -233,6 +234,7 @@
             // buttonBuscar
             // 
             this.buttonBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.Color.White;
@@ -263,6 +265,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(179, 109);
             this.comboBox1.Name = "comboBox1";

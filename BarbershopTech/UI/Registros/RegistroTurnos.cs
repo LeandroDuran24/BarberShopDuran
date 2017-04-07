@@ -195,25 +195,34 @@ namespace BarbershopTech.Registros
 
             }
             Limpiar();
+            NombrecomboBox.Focus();
 
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(IdtextBox.Text);
-            turno = BLL.TurnoBLL.Buscar((p => p.TurnosId == id));
-
-            if (turno != null)
+            if (string.IsNullOrEmpty(IdtextBox.Text))
             {
-                BLL.TurnoBLL.Eliminar(turno);
-                MessageBox.Show("Se ha eliminado Correctamente");
+                errorProvider1.SetError(IdtextBox, "Favor Llenar");
             }
             else
             {
-                MessageBox.Show("No se ha Eliminado");
+                int id = int.Parse(IdtextBox.Text);
+                turno = BLL.TurnoBLL.Buscar((p => p.TurnosId == id));
 
+                if (turno != null)
+                {
+                    BLL.TurnoBLL.Eliminar(turno);
+                    MessageBox.Show("Se ha eliminado Correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se ha Eliminado");
+
+                }
+                Limpiar();
             }
-            Limpiar();
+
         }
 
         private void buttonNuevo_Click(object sender, EventArgs e)
@@ -223,21 +232,30 @@ namespace BarbershopTech.Registros
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(IdtextBox.Text);
-            turno = BLL.TurnoBLL.Buscar((p => p.TurnosId == id));
-
-            if (turno != null)
+            if (string.IsNullOrEmpty(IdtextBox.Text))
             {
-                NombrecomboBox.Text = turno.NombreCliente;
-                PeluquerocomboBox.Text = turno.NombrePeluquero;
-                dateTimePickerHasta.Text = Convert.ToString(turno.FechaHasta);
-               
+                errorProvider1.SetError(IdtextBox, "Favor Llenar");
             }
             else
             {
-                MessageBox.Show("No se ha Eliminado");
+                int id = int.Parse(IdtextBox.Text);
+                turno = BLL.TurnoBLL.Buscar((p => p.TurnosId == id));
 
+                if (turno != null)
+                {
+                    NombrecomboBox.Text = turno.NombreCliente;
+                    PeluquerocomboBox.Text = turno.NombrePeluquero;
+                    dateTimePickerHasta.Text = Convert.ToString(turno.FechaHasta);
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe");
+                    Limpiar();
+
+                }
             }
+
         }
 
         private void NombrecomboBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -253,8 +271,34 @@ namespace BarbershopTech.Registros
         private void IdtextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumero(e);
-        }
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(IdtextBox.Text))
+                {
+                    errorProvider1.SetError(IdtextBox, "Favor Llenar");
+                }
+                else
+                {
+                    int id = int.Parse(IdtextBox.Text);
+                    turno = BLL.TurnoBLL.Buscar((p => p.TurnosId == id));
 
+                    if (turno != null)
+                    {
+                        NombrecomboBox.Text = turno.NombreCliente;
+                        PeluquerocomboBox.Text = turno.NombrePeluquero;
+                        dateTimePickerHasta.Text = Convert.ToString(turno.FechaHasta);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha Eliminado");
+                        Limpiar();
+
+                    }
+                }
+
+            }
+        }
         private void PeluquerocomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ActualizarHoraturno();

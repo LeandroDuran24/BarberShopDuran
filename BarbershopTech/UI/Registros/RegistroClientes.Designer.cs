@@ -54,6 +54,7 @@
             // 
             // FechadateTimePicker1
             // 
+            this.FechadateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FechadateTimePicker1.CustomFormat = "yyy/MM/dd";
             this.FechadateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker1.Location = new System.Drawing.Point(146, 180);
@@ -79,6 +80,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Eliminarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Eliminarbutton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.ForeColor = System.Drawing.Color.White;
@@ -96,6 +98,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Guardarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Guardarbutton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.ForeColor = System.Drawing.Color.White;
@@ -112,6 +115,7 @@
             // 
             // cedmaskedTextBox
             // 
+            this.cedmaskedTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cedmaskedTextBox.Location = new System.Drawing.Point(146, 154);
             this.cedmaskedTextBox.Mask = "999-9999999-9";
             this.cedmaskedTextBox.Name = "cedmaskedTextBox";
@@ -261,6 +265,7 @@
             // buttonNuevo
             // 
             this.buttonNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.buttonNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNuevo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNuevo.ForeColor = System.Drawing.Color.White;
@@ -278,6 +283,7 @@
             // buttonBuscar
             // 
             this.buttonBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.Color.White;
