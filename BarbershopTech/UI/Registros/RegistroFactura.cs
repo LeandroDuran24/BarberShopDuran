@@ -443,7 +443,7 @@ namespace BarbershopTech.Registros
                     MessageBox.Show("El Monto es menor que el total, Favor Completar");
                     textBoxMonto.Clear();
                 }
-                else
+                else if(Utilidades.TOINT(textBoxMonto.Text )>= Utilidades.TOINT(textBoxTotal.Text))
                 {
                     decimal devuelta = Convert.ToDecimal(Utilidades.TOINT(textBoxMonto.Text) - Utilidades.TOINT(textBoxTotal.Text));
                     textBoxDevuelta.Text = devuelta.ToString();
