@@ -45,11 +45,13 @@ namespace BarbershopTech.Registros
                 errorProvider1.SetError(comboBoxNombre, "Favor Llenar");
                 return false;
             }
+
             if (string.IsNullOrEmpty(ProductoIdtextBox.Text))
             {
                 errorProvider1.SetError(ProductoIdtextBox, "Favor Llenar");
                 return false;
             }
+
             if (string.IsNullOrEmpty(textBoxMonto.Text))
             {
                 errorProvider1.SetError(textBoxMonto, "Favor Llenar");
@@ -274,7 +276,6 @@ namespace BarbershopTech.Registros
 
         }
 
-
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBoxfacturaId.Text))
@@ -359,9 +360,9 @@ namespace BarbershopTech.Registros
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                if (string.IsNullOrEmpty(textBoxfacturaId.Text))
+                if (string.IsNullOrEmpty(ProductoIdtextBox.Text))
                 {
-                    errorProvider1.SetError(textBoxfacturaId, "Favor Llenar");
+                    errorProvider1.SetError(ProductoIdtextBox, "Favor Llenar");
                 }
                 else
                 {
@@ -470,12 +471,12 @@ namespace BarbershopTech.Registros
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void label16_Click(object sender, EventArgs e)
