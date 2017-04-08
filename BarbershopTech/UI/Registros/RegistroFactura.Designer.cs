@@ -101,6 +101,7 @@
             // 
             this.textBoxfacturaId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxfacturaId.Location = new System.Drawing.Point(94, 14);
+            this.textBoxfacturaId.MaxLength = 5;
             this.textBoxfacturaId.Name = "textBoxfacturaId";
             this.textBoxfacturaId.Size = new System.Drawing.Size(100, 20);
             this.textBoxfacturaId.TabIndex = 51;
@@ -457,6 +458,7 @@
             // 
             this.textBoxComentario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxComentario.Location = new System.Drawing.Point(115, 112);
+            this.textBoxComentario.MaxLength = 200;
             this.textBoxComentario.Multiline = true;
             this.textBoxComentario.Name = "textBoxComentario";
             this.textBoxComentario.Size = new System.Drawing.Size(314, 91);
@@ -469,6 +471,7 @@
             this.textBoxPorcientoDescuento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxPorcientoDescuento.ForeColor = System.Drawing.Color.Black;
             this.textBoxPorcientoDescuento.Location = new System.Drawing.Point(620, 148);
+            this.textBoxPorcientoDescuento.MaxLength = 2;
             this.textBoxPorcientoDescuento.Name = "textBoxPorcientoDescuento";
             this.textBoxPorcientoDescuento.Size = new System.Drawing.Size(123, 25);
             this.textBoxPorcientoDescuento.TabIndex = 85;
@@ -479,6 +482,7 @@
             // 
             this.textBoxImpuesto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxImpuesto.Location = new System.Drawing.Point(620, 180);
+            this.textBoxImpuesto.MaxLength = 2;
             this.textBoxImpuesto.Name = "textBoxImpuesto";
             this.textBoxImpuesto.Size = new System.Drawing.Size(123, 25);
             this.textBoxImpuesto.TabIndex = 86;
@@ -573,6 +577,7 @@
             this.textBoxMonto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.textBoxMonto.Location = new System.Drawing.Point(109, 96);
+            this.textBoxMonto.MaxLength = 8;
             this.textBoxMonto.Multiline = true;
             this.textBoxMonto.Name = "textBoxMonto";
             this.textBoxMonto.Size = new System.Drawing.Size(117, 25);

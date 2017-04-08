@@ -175,7 +175,7 @@
             this.CostoTexBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CostoTexBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CostoTexBox.Location = new System.Drawing.Point(164, 81);
-            this.CostoTexBox.MaxLength = 10;
+            this.CostoTexBox.MaxLength = 8;
             this.CostoTexBox.Name = "CostoTexBox";
             this.CostoTexBox.Size = new System.Drawing.Size(208, 20);
             this.CostoTexBox.TabIndex = 2;

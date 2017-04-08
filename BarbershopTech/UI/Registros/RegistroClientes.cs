@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Entidades;
 
@@ -62,9 +63,17 @@ namespace BarbershopTech.Registros
             cliente.Nombres = nombretextBox.Text;
             cliente.Apellidos = apellidotextBox.Text;
             cliente.Direccion = direcciontextBox1.Text;
-            cliente.Email = emailextBox.Text;
             cliente.Cedula = cedmaskedTextBox.Text;
             cliente.Fecha = FechadateTimePicker1.Value;
+
+            if (!emailValidar())
+            {
+                MessageBox.Show("Dirección no valida");
+            }
+            else
+            {
+                cliente.Email = emailextBox.Text;
+            }
             return cliente;
         }
 
@@ -110,6 +119,27 @@ namespace BarbershopTech.Registros
             }
         }
 
+        public Boolean emailValidar()
+        {
+            Regex expresion = new Regex(@"^(([^<>()[\]\\.,;:\s@\""]+"
+                                        + @"(\.[^<>()[\]\\.,;:\s@\""]+)*)|(\"".+\""))@"
+                                        + @"((\[[0-9]{1-3}\.[0-9]{1-3}\.[0-9]{1-3}"
+                                        + @"\.[0-9]{1-3}\])|(([a-zA-Z\-0-9]+\.)+"
+                                        + @"[a-zA-Z]{2,}))$",
+                                        RegexOptions.Compiled);
+
+            if (emailextBox.Text != "")
+            {
+                if (!expresion.IsMatch(emailextBox.Text))
+                {
+                    errorProvider1.SetError(emailextBox, "Favor Poner Correo Correcto");
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(IdtextBox.Text))
@@ -119,7 +149,7 @@ namespace BarbershopTech.Registros
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar?", "¡Advertencia!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     int id = int.Parse(IdtextBox.Text);
@@ -162,17 +192,39 @@ namespace BarbershopTech.Registros
                 cliente = LlenarCampos();
                 if (cliente.ClienteId != 0)
                 {
-                    BLL.ClienteBLL.Mofidicar(cliente);
-                    MessageBox.Show("Se ha modificado");
+                    if (!emailValidar())
+                    {
+                        emailextBox.Clear();
+                        errorProvider1.Clear();
+                        emailextBox.Focus();
+                    }
+                    else
+                    {
+                        BLL.ClienteBLL.Mofidicar(cliente);
+                        MessageBox.Show("Se ha modificado");
+                    }
+
                 }
                 else
                 {
-                    BLL.ClienteBLL.Guardar(cliente);
-                    MessageBox.Show("Se ha Guardado Correctamente...");
+                    if (!emailValidar())
+                    {
+                        emailextBox.Clear();
+                        errorProvider1.Clear();
+                        emailextBox.Focus();
+                    }
+                    else
+                    {
+                        BLL.ClienteBLL.Guardar(cliente);
+                        MessageBox.Show("Se ha Guardado Correctamente...");
+                        Limpiar();
+                        nombretextBox.Focus();
+                    }
+
                 }
 
-                Limpiar();
-                nombretextBox.Focus();
+
+
             }
         }
 

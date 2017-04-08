@@ -214,8 +214,21 @@ namespace BarbershopTech.Registros
                     }
                     else
                     {
-                        BLL.UsuarioBLL.Guardar(usuario);
-                        MessageBox.Show("Se ha Guardado Correctamente..."); ;
+
+                        Usuarios usuarios = BLL.UsuarioBLL.Buscar(p => p.Email == EmailtextBox.Text);
+
+                        if (usuarios == null)
+                        {
+
+                            BLL.UsuarioBLL.Guardar(usuario);
+                            MessageBox.Show("Se ha Guardado Correctamente...");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ya existe Usuarios con dicho Nombre");
+                            Limpiar();
+                        }
+
                     }
                 }
                 Limpiar();
@@ -257,6 +270,33 @@ namespace BarbershopTech.Registros
         private void textBoxId_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumero(e);
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(textBoxId.Text))
+                {
+                    errorProvider1.SetError(textBoxId, "Favor Llenar");
+                }
+                else
+                {
+                    int id = int.Parse(textBoxId.Text);
+                    usuario = BLL.UsuarioBLL.Buscar(p => p.UsuarioId == id);
+
+                    if (usuario != null)
+                    {
+                        EmailtextBox.Text = usuario.Email;
+                        NombretextBox.Text = usuario.Nombres;
+                        ContraseñamaskedTextBox.Text = Convert.ToString(usuario.Contrasena);
+                        ConfirmarmaskedTextBox.Text = Convert.ToString(usuario.Confirmar);
+                        comboBox1.Text = usuario.Tipo;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe");
+                        Limpiar();
+                    }
+                }
+            }
         }
 
         private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
